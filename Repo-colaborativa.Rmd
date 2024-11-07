@@ -37,7 +37,7 @@ library(gh)
 library(remotes)
 ```
 
-4. Configurar Git: los cambios hechos en GitHub se asocian a un usuario
+4. Configurar Git en R: los cambios hechos en GitHub se asocian a un usuario
 
 git_config_global_set("user.name", "Your Name")
 
@@ -59,7 +59,7 @@ git_config_global()
 
 ## **Subir y bajar archivos**
 
-En proyectos colaborativos resulta relevante mantener una base de datos de fácil acceso donde puedan acceder los integrantes del equipo. GitHub permite generar un repositorio digital donde almacenar datos crudos, datos procesados, scripts para algún análisis particular, entre otros archivos. GitHub permite otorgar accesos para ver o editar la información disponible, permitiendo compartir datos con integrantes del equipo y con la comunidad de GitHub. Es posible sincronizar GitHub con Rstudio para acceder y manipular la base de datos desde el local de cada usuario. De esta forma, es posible bajar los archivos necesarios, trabajar con ellos desde el local y subirlos nuevamente a GitHub según las necesidades de cada proyecto. 
+En proyectos colaborativos resulta relevante mantener una base de datos de fácil acceso donde puedan acceder los integrantes del equipo. **GitHub permite generar un repositorio digital donde almacenar datos crudos, datos procesados, scripts para algún análisis particular, entre otros archivos**. GitHub permite otorgar accesos para ver o editar la información disponible, permitiendo compartir datos con integrantes del equipo y con la comunidad de GitHub. Es posible sincronizar GitHub con Rstudio para acceder y manipular la base de datos desde el local de cada usuario. De esta forma, es posible bajar los archivos necesarios, trabajar con ellos desde el local y subirlos nuevamente a GitHub según las necesidades de cada proyecto. 
 
 ![Flujo de trabajo](imagenes_git_tutorial/git_flux.png)
 
@@ -80,32 +80,47 @@ library(remotes)
 
 4. Guarda los cambios. Hasta este punto los cambios en el archivo están almacenados en tu disco local.
 
-5. Para verificar el estado de los archivos respecto a la nube. Podría por ejemplo indicar que se realizó en ciertos archivos localizados en la nube
+5. Para verificar el estado de los archivos respecto a la nube.
 
   git_status()
   
 6. Seleccionar los archivos a subir a la nube
 
-  git_add("") Ej: git_add("Prueba")
+  git_add("Prueba")
   
   git_status
   
-7. Registrar los cambios realizados. **Commit** se refiere a un mensaje muy corto en que se especifica los cambios que se hizo desde la última actualización. Este mensaje aparecerá en la versión online también. A este punto se tendrá seleccionado y listos para subirse los archivos al repositorio. git_commit("") 
+7. Registrar los cambios realizados. **Commit** se refiere a un mensaje muy corto en que se especifica los cambios que se hizo desde la última actualización. Este mensaje aparecerá en la versión online también. A este punto se tendrá seleccionado y listos para subirse los archivos al repositorio. 
 
-Ej: git_add("actualización final")
+git_commit("actualización final")
 
   git_status
   
 8. "Empujar" los cambios seleccionados al repositorio
 
-
   git_push()
   
 9. En proyectos colaborativos git_pull() sirve para "jalar" los cambios realizados por otros usuarios o cambios realizados directamente en GitHub.com que no estén sincronizados con la copia local
 
+## **Pull request**
+
+Una solicitud de cambios es una propuesta para combinar un conjunto de cambios de una rama con otra. En una solicitud de cambios, los colaboradores pueden revisar y analizar el conjunto propuesto de cambios antes de integrar los cambios en el código base principal.
+
+1. Hacer un fork del repositorio: copia un repositorio completo a tu cuenta de GitHub
+
+2. Clonar el repositorio
+
+git_clone(url)
+
+3. Haz cambios y presiona guardar
+
+4. Add, Commit, Push
+
+5. En GitHub y presiona Pull request
+
 # RECOMENDACIONES DE USO DE GITHUB
 
-## **flujo de trabajo típico en GitHub**
+## **Flujo de trabajo típico en GitHub**
 
 1. Crear un repositorio remoto que se sincronice con archivos y directorios almacenados localmente
 
@@ -145,6 +160,6 @@ Ej: git_add("actualización final")
 
 ![Conceptos básicos de GitHub](imagenes_git_tutorial/Glosario.jpeg)
 
-# **Referencias**
+# **REFERENCIAS**
 - https://jennybc.github.io/2014-05-12-ubc/ubc-r/session03_git.html
 - Braga, P. H. P., Hébert, K., Hudgins, E. J., Scott, E. R., Edwards, B. P. M., Sánchez Reyes, L. L., Grainger, M. J., Foroughirad, V., Hillemann, F., Binley, A. D., Brookson, C. B., Gaynor, K. M., Shafiei Sabet, S., Güncan, A., Weierbach, H., Gomes, D. G. E., & Crystal-Ornelas, R. (2023). Not just for programmers: How GitHub can accelerate collaborative and reproducible research in ecology and evolution. Methods in Ecology and Evolution, 14, 1364–1380. https://doi.org/10.1111/2041-210X.14108
