@@ -141,10 +141,6 @@ Ej: git_add("actualización final")
 
 - **Organizar y manejar equipos:** Los colaboradores se pueden agrupar en equipos dentro de una organización, lo que permite a los administradores asignar roles, tareas y permisos de modificación de repositorios a los miembros de la organización
 
-## **Objetivo del repositorio GET**
-Almacenar la información pasada, presente y futura correspondiente al GET. Incluye datos climáticos por temporada y sitios de muestreo, scripts de análisis, figuras relevantes, manuscritos y/o archivos para publicaciónes y carpetas individuales con el trabajo de cada integrante del equipo
-En un futuro se pretende hacer publicas ciertas bases de datos con información relevante para la comunidad científica
-
 # GLOSARIO
 
 ![Conceptos básicos de GitHub](imagenes_git_tutorial/Glosario.jpeg)
