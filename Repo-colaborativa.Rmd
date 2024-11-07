@@ -74,7 +74,7 @@ library(gert)
 library(gh)
 library(remotes)
 ```
-2. Seleccionar el archivo de .md que el corresponda
+2. Crea un documento de texto
 
 3. Escribe lo que quieras
 
@@ -88,13 +88,13 @@ library(remotes)
 
   git_add("Prueba")
   
-  git_status
+  git_status()
   
 7. Registrar los cambios realizados. **Commit** se refiere a un mensaje muy corto en que se especifica los cambios que se hizo desde la última actualización. Este mensaje aparecerá en la versión online también. A este punto se tendrá seleccionado y listos para subirse los archivos al repositorio. 
 
 git_commit("actualización final")
 
-  git_status
+  git_status()
   
 8. "Empujar" los cambios seleccionados al repositorio
 
